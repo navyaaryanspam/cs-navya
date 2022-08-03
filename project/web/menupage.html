@@ -1,0 +1,321 @@
+<style>
+  body {
+    background-image: url('menu1_bg.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    
+  }
+ 
+  
+  .frame {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+  }
+  button {
+    margin: 20px;
+  }
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+
+  /* 1 */
+  .btn-one {
+    background: rgb(0,172,238);
+  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    postion :absolute;
+    top: 600px;
+    left:200px;
+  }
+  .btn-one span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-one:before,
+  .btn-one:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+     background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  .btn-one:before {
+    height: 0%;
+    width: 2px;
+  }
+  .btn-one:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-one:hover{
+     background: transparent;
+    box-shadow: none;
+  }
+  .btn-one:hover:before {
+    height: 100%;
+  }
+  .btn-one:hover:after {
+    width: 100%;
+  }
+  .btn-one span:hover{
+     color: rgba(2,126,251,1);
+  }
+  .btn-one span:before,
+  .btn-one span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+     background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  .btn-one span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .btn-one span:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-one span:hover:before {
+    height: 100%;
+  }
+  .btn-one span:hover:after {
+    width: 100%;
+  }
+
+  /* 2 */
+  .btn-two {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: rgb(214, 141, 214);
+  background: linear-gradient(0deg, rgb(233, 213, 233) 0%, rgb(153, 96, 211) 100%);
+  }
+  .btn-two:hover {
+    color: #c279ea;
+    background: transparent;
+     box-shadow:none;
+  }
+  .btn-two:before,
+  .btn-two:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #c279ea;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .btn-two:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn-two:hover:before,
+  .btn-two:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
+  
+  /* 3 */
+  .btn-three {
+    background: rgb(247,150,192);
+  background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+  }
+  .btn-three span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-three:before,
+  .btn-three:after {
+    position: absolute;
+    content: "";
+    height: 0%;
+    width: 1px;
+   box-shadow:
+     -1px -1px 20px 0px rgba(255,255,255,1),
+     -4px -4px 5px 0px rgba(255,255,255,1),
+     7px 7px 20px 0px rgba(0,0,0,.4),
+     4px 4px 5px 0px rgba(0,0,0,.3);
+  }
+  .btn-three:before {
+    right: 0;
+    top: 0;
+    transition: all 500ms ease;
+  }
+  .btn-three:after {
+    left: 0;
+    bottom: 0;
+    transition: all 500ms ease;
+  }
+  .btn-three:hover{
+    background: transparent;
+    color: #76aef1;
+    box-shadow: none;
+  }
+  .btn-three:hover:before {
+    transition: all 500ms ease;
+    height: 100%;
+  }
+  .btn-three:hover:after {
+    transition: all 500ms ease;
+    height: 100%;
+  }
+  .btn-three span:before,
+  .btn-three span:after {
+    position: absolute;
+    content: "";
+    box-shadow:
+     -1px -1px 20px 0px rgba(255,255,255,1),
+     -4px -4px 5px 0px rgba(255,255,255,1),
+     7px 7px 20px 0px rgba(0,0,0,.4),
+     4px 4px 5px 0px rgba(0,0,0,.3);
+  }
+  .btn-three span:before {
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: .5px;
+    transition: all 500ms ease;
+  }
+  .btn-three span:after {
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: .5px;
+    transition: all 500ms ease;
+  }
+  .btn-three span:hover:before {
+    width: 100%;
+  }
+  .btn-three span:hover:after {
+    width: 100%;
+  }
+  </style>
+<header>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</header>
+<script type="text/javascript" src="/eel.js"></script>
+<script type="text/javascript">
+//function navya() {
+//eel.abcd("navya");
+//}
+</script>
+
+
+<script type="text/javascript">
+eel.expose(change_state);
+state = ' '
+function change_state(changed_stated) {
+  state = changed_state;
+  if (state == 'show_records'){
+    window.open('C:\\Users\\Nimtavya Enterprises\\Desktop\\school\\CS\\project\\web\\pages\\delete.html',"","toolbar=no,status=no,menubar=no,location=center,scrollbars=no,resizable=no,height=500,width=657");
+  }
+  if (state == 'edit_records'){
+    window.open('C:\\Users\\Nimtavya Enterprises\\Desktop\\school\\CS\\project\\web\\pages\\insert.html',"","toolbar=no,status=no,menubar=no,location=center,scrollbars=no,resizable=no,height=500,width=657");
+  }
+  if (state == 'replace_records'){
+    window.open('C:\\Users\\Nimtavya Enterprises\\Desktop\\school\\CS\\project\\web\\pages\\edit.html',"","toolbar=no,status=no,menubar=no,location=center,scrollbars=no,resizable=no,height=500,width=657");
+  }
+  if (state == 'buttonfour'){
+    window.open('C:\\Users\\Nimtavya Enterprises\\Desktop\\school\\CS\\project\\web\\pages\\show.html',"","toolbar=no,status=no,menubar=no,location=center,scrollbars=no,resizable=no,height=500,width=657");
+  }
+  (state == 'buttonfive')
+  {
+    window.open('www.google.com',"","toolbar=no,status=no,menubar=no,location=center,scrollbars=no,resizable=no,height=500,width=657");
+  }
+
+
+}
+/// button functions/////
+eel.expose(switchpage);
+function switchpage(page) {
+  console.log(page);
+  if (page == "show_records") {
+    console.log("switching to " + page);
+  }
+  if (page == "edit_records") {
+    console.log("switching to " + page);
+  }
+  if (page == "buttonothree") {
+    console.log("switching to " + page);
+  }
+
+  
+}
+
+
+///// button functions
+
+
+
+function buttonclick_one(){
+  eel.sendstate("show_records");
+}
+
+function buttonclick_two(){
+  eel.sendstate("edit_records");
+}
+
+function buttonclick_three(){
+  eel.sendstate("replace_records");
+}
+
+
+
+//////
+
+/////// button functions end /////////////////
+</script>
+
+
+<div class="frame">
+  <div class = 'button_one'>
+<button class="custom-btn btn-one" onclick="buttonclick_one()"><span>show all books</span></button>
+</div>
+<div class = 'button_two'>\
+  <button class="custom-btn btn-two" onclick="buttonclick_two()"><span>place an order</span></button>
+</div>
+<div class = 'button_three'>
+<button class="custom-btn btn-three" onclick="buttonclick_three()"><span>place a req</span></button>
+</div>
+</div>

@@ -1,0 +1,91 @@
+<style> 
+ body {
+    background: url('menu1_bg.png');
+ }
+ button {
+    .btn-one {
+        position : absolute
+        left : 417 px;
+        top : 379 px ; 
+    }
+ }
+
+  </style>
+  </style>
+  <header>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  </header>
+  <script type="text/javascript" src="/eel.js"></script>
+  <script type="text/javascript">
+  //function navya() {
+  //eel.abcd("navya");
+  //}
+  </script>
+  
+  
+  <script type="text/javascript">
+  eel.expose(change_state);
+  state = ' '
+  function change_state(changed_stated) {
+    state = changed_state;
+    if (state == 'show_records'){
+      window.open('C:\\Users\\Nimtavya Enterprises\\Desktop\\school\\CS\\project\\web\\pages\\delete.html',"","toolbar=no,status=no,menubar=no,location=center,scrollbars=no,resizable=no,height=500,width=657");
+    }
+    if (state == 'edit_records'){
+      window.open('C:\\Users\\Nimtavya Enterprises\\Desktop\\school\\CS\\project\\web\\pages\\insert.html',"","toolbar=no,status=no,menubar=no,location=center,scrollbars=no,resizable=no,height=500,width=657");
+    }
+    if (state == 'replace_records'){
+      window.open('C:\\Users\\Nimtavya Enterprises\\Desktop\\school\\CS\\project\\web\\pages\\edit.html',"","toolbar=no,status=no,menubar=no,location=center,scrollbars=no,resizable=no,height=500,width=657");
+    }
+
+  
+  
+  }
+  /// button functions/////
+  eel.expose(switchpage);
+  function switchpage(page) {
+    console.log(page);
+    if (page == "show_records") {
+      console.log("switching to " + page);
+    }
+    if (page == "edit_records") {
+      console.log("switching to " + page);
+    }
+    if (page == "buttonothree") {
+      console.log("switching to " + page);
+    }
+  
+    
+  }
+  
+  
+  ///// button functions
+  
+  
+  
+  function show_books(){
+    eel.sendstate("show_records");
+  }
+  
+  function place_order(){
+    eel.sendstate("place_order");
+  }
+  
+  function place_request(){
+    eel.sendstate("request");
+  }
+  
+  
+  
+  //////
+  
+  /////// button functions end /////////////////
+  </script>
+  
+  
+  <div class="frame">
+  <button class="custom-btn btn-one" onclick="show_books()"><span>show all books</span></button>
+  <button class="custom-btn btn-two" onclick="place_order()"><span>place an order</span></button>
+  <button class="custom-btn btn-three" onclick="place_request()"><span>plac a request</span></button>
+ 
+  </div>

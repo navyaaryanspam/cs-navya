@@ -1,0 +1,567 @@
+<style>
+  body {
+    background: rgba(0, 0, 0, 0.849);
+    
+  }
+  h1 {
+    position: relative;
+    text-align: center;
+    color: #7fc6ec;
+    font-size: 50px;
+    font-family: "Cormorant Garamond", serif;
+  }
+  
+  .frame {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+  }
+  button {
+    margin: 20px;
+  }
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+
+  /* 1 */
+  .btn-one {
+    background: rgb(0,172,238);
+  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    
+  }
+  .btn-one span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-one:before,
+  .btn-one:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+     background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  .btn-one:before {
+    height: 0%;
+    width: 2px;
+  }
+  .btn-one:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-one:hover{
+     background: transparent;
+    box-shadow: none;
+  }
+  .btn-one:hover:before {
+    height: 100%;
+  }
+  .btn-one:hover:after {
+    width: 100%;
+  }
+  .btn-one span:hover{
+     color: rgba(2,126,251,1);
+  }
+  .btn-one span:before,
+  .btn-one span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+     background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  .btn-one span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .btn-one span:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-one span:hover:before {
+    height: 100%;
+  }
+  .btn-one span:hover:after {
+    width: 100%;
+  }
+
+  /* 2 */
+  .btn-two {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: rgb(214, 141, 214);
+  background: linear-gradient(0deg, rgb(233, 213, 233) 0%, rgb(153, 96, 211) 100%);
+  }
+  .btn-two:hover {
+    color: #c279ea;
+    background: transparent;
+     box-shadow:none;
+  }
+  .btn-two:before,
+  .btn-two:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #c279ea;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .btn-two:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn-two:hover:before,
+  .btn-two:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
+  
+  /* 3 */
+  .btn-three {
+    background: rgb(247,150,192);
+  background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+  }
+  .btn-three span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-three:before,
+  .btn-three:after {
+    position: absolute;
+    content: "";
+    height: 0%;
+    width: 1px;
+   box-shadow:
+     -1px -1px 20px 0px rgba(255,255,255,1),
+     -4px -4px 5px 0px rgba(255,255,255,1),
+     7px 7px 20px 0px rgba(0,0,0,.4),
+     4px 4px 5px 0px rgba(0,0,0,.3);
+  }
+  .btn-three:before {
+    right: 0;
+    top: 0;
+    transition: all 500ms ease;
+  }
+  .btn-three:after {
+    left: 0;
+    bottom: 0;
+    transition: all 500ms ease;
+  }
+  .btn-three:hover{
+    background: transparent;
+    color: #76aef1;
+    box-shadow: none;
+  }
+  .btn-three:hover:before {
+    transition: all 500ms ease;
+    height: 100%;
+  }
+  .btn-three:hover:after {
+    transition: all 500ms ease;
+    height: 100%;
+  }
+  .btn-three span:before,
+  .btn-three span:after {
+    position: absolute;
+    content: "";
+    box-shadow:
+     -1px -1px 20px 0px rgba(255,255,255,1),
+     -4px -4px 5px 0px rgba(255,255,255,1),
+     7px 7px 20px 0px rgba(0,0,0,.4),
+     4px 4px 5px 0px rgba(0,0,0,.3);
+  }
+  .btn-three span:before {
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: .5px;
+    transition: all 500ms ease;
+  }
+  .btn-three span:after {
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: .5px;
+    transition: all 500ms ease;
+  }
+  .btn-three span:hover:before {
+    width: 100%;
+  }
+  .btn-three span:hover:after {
+    width: 100%;
+  }
+  
+  /* 4 */
+  .btn-four {
+  background: linear-gradient(0deg, rgb(89, 121, 204) 0%, rgb(129, 195, 228) 100%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+  }
+  .btn-four span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-four:before,
+  .btn-four:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: rgba(89, 121, 204);
+    box-shadow:
+     -7px -7px 20px 0px rgba(255,255,255,.9),
+     -4px -4px 5px 0px rgba(255,255,255,.9),
+     7px 7px 20px 0px rgba(0,0,0,.2),
+     4px 4px 5px 0px rgba(0,0,0,.3);
+    transition: all 0.3s ease;
+  }
+  .btn-four:before{
+     height: 0%;
+     width: 2px;
+  }
+  .btn-four:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-four:hover{
+    color: rgba(89, 121, 204);
+    background: transparent;
+  }
+  .btn-four:hover:before {
+    height: 100%;
+  }
+  .btn-four:hover:after {
+    width: 100%;
+  }
+  .btn-four span:before,
+  .btn-four span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: rgba(89, 121, 204);
+    box-shadow:
+     -7px -7px 20px 0px rgba(255,255,255,.9),
+     -4px -4px 5px 0px rgba(255,255,255,.9),
+     7px 7px 20px 0px rgba(0,0,0,.2),
+     4px 4px 5px 0px rgba(0,0,0,.3);
+    transition: all 0.3s ease;
+  }
+  .btn-four span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .btn-four span:after {
+    height: 2px;
+    width: 0%;
+  }
+  .btn-four span:hover:before {
+    height: 100%;
+  }
+  .btn-four span:hover:after {
+    width: 100%;
+  }
+  
+  /* 5 */
+  .btn-five {
+    background-color: #f0ecfc;
+  background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+  }
+  .btn-five span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-five:before,
+  .btn-five:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: #c797eb;
+    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+    transition: all 0.3s ease;
+  }
+  .btn-five:before{
+     height: 0%;
+     width: 2px;
+  }
+  .btn-five:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-five:hover:before {
+    height: 100%;
+  }
+  .btn-five:hover:after {
+    width: 100%;
+  }
+  .btn-five:hover{
+    background: transparent;
+  }
+  .btn-five span:hover{
+    color: #c797eb;
+  }
+  .btn-five span:before,
+  .btn-five span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: #c797eb;
+    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+    transition: all 0.3s ease;
+  }
+  .btn-five span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .btn-five span:after {
+    height: 2px;
+    width: 0%;
+  }
+  .btn-five span:hover:before {
+    height: 100%;
+  }
+  .btn-five span:hover:after {
+    width: 100%;
+  }
+     /* 6 */
+  .btn-six {
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  .btn-six:after {
+    position: absolute;
+    content: " ";
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+     background-color: #1fd1f9;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    transition: all 0.3s ease;
+  }
+  .btn-six:hover {
+    background: transparent;
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+    color: #fff;
+  }
+  .btn-six:hover:after {
+    -webkit-transform: scale(2) rotate(180deg);
+    transform: scale(2) rotate(180deg);
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  }
+   /* 7 */
+  .btn-seven {
+    background: #b621fe;
+    border: none;
+    z-index: 1;
+  }
+  .btn-seven:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #663dff;
+    border-radius: 5px;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+  }
+  .btn-seven:hover {
+    color: #fff;
+  }
+  .btn-seven:hover:after {
+    left: 0;
+    width: 100%;
+  }
+  .btn-seven:active {
+    top: 2px;
+  }
+   /* 8 */
+  .btn-eight {
+    border: none;
+    color: rgb(202, 166, 250);
+  }
+  .btn-eight:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+  }
+  .btn-eight:hover {
+    color: rgb(0, 0, 0);
+  }
+  .btn-eight:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  .btn-eight:active {
+    top: 2px;
+  }
+  </style>
+<header>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</header>
+<script type="text/javascript" src="/eel.js"></script>
+<script type="text/javascript">
+//function navya() {
+//eel.abcd("navya");
+//}
+</script>
+
+
+<script type="text/javascript">
+eel.expose(change_state);
+state = ' '
+function change_state(changed_stated) {
+  state = changed_state;
+  if (state == 'show_records'){
+    window.open('C:\\Users\\Nimtavya Enterprises\\Desktop\\school\\CS\\project\\web\\pages\\delete.html',"","toolbar=no,status=no,menubar=no,location=center,scrollbars=no,resizable=no,height=500,width=657");
+  }
+  if (state == 'edit_records'){
+    window.open('C:\\Users\\Nimtavya Enterprises\\Desktop\\school\\CS\\project\\web\\pages\\insert.html',"","toolbar=no,status=no,menubar=no,location=center,scrollbars=no,resizable=no,height=500,width=657");
+  }
+  if (state == 'replace_records'){
+    window.open('C:\\Users\\Nimtavya Enterprises\\Desktop\\school\\CS\\project\\web\\pages\\edit.html',"","toolbar=no,status=no,menubar=no,location=center,scrollbars=no,resizable=no,height=500,width=657");
+  }
+  if (state == 'buttonfour'){
+    window.open('C:\\Users\\Nimtavya Enterprises\\Desktop\\school\\CS\\project\\web\\pages\\show.html',"","toolbar=no,status=no,menubar=no,location=center,scrollbars=no,resizable=no,height=500,width=657");
+  }
+  (state == 'buttonfive')
+  {
+    window.open('www.google.com',"","toolbar=no,status=no,menubar=no,location=center,scrollbars=no,resizable=no,height=500,width=657");
+  }
+
+
+}
+/// button functions/////
+eel.expose(switchpage);
+function switchpage(page) {
+  console.log(page);
+  if (page == "show_records") {
+    console.log("switching to " + page);
+  }
+  if (page == "edit_records") {
+    console.log("switching to " + page);
+  }
+  if (page == "buttonothree") {
+    console.log("switching to " + page);
+  }
+
+  
+}
+
+
+///// button functions
+
+
+
+function buttonclick_one(){
+  eel.sendstate("show_records");
+}
+
+function buttonclick_two(){
+  eel.sendstate("edit_records");
+}
+
+function buttonclick_three(){
+  eel.sendstate("replace_records");
+}
+
+
+
+//////
+
+/////// button functions end /////////////////
+</script>
+
+<h1>INVENTORY MANAGEMENT</h1>
+<div class="frame">
+<button class="custom-btn btn-one" onclick="buttonclick_one()"><span>Delete</span></button>
+<button class="custom-btn btn-two" onclick="buttonclick_two()"><span>Insert</span></button>
+<button class="custom-btn btn-three" onclick="buttonclick_three()"><span>Edit</span></button>
+<button class="custom-btn btn-four" onclick="buttonclick_four()"><span>Show</span></button>
+<button class="custom-btn btn-five" onclick="buttonclick_five()"><span>extra 1/span></button>
+<button class="custom-btn btn-six">extra 2</button>
+<button class="custom-btn btn-seven">extra 3</button>
+<button class="custom-btn btn-eight">extra 4</button>
+</div>
